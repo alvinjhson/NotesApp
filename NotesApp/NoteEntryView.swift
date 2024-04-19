@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import FirebaseFirestore
 
 struct NoteEntryView: View {
     
@@ -14,6 +15,7 @@ struct NoteEntryView: View {
     @EnvironmentObject var notes : NoteViewModel
     
     @State var note : String = ""
+    @State var id : String = ""
   
     
     @Environment(\.presentationMode) var presentationMode
@@ -41,12 +43,7 @@ struct NoteEntryView: View {
            
         }
     }
-//    private func setEmail() {
-//        if let userEntry = userEntry {
-//            email = userEntry.email
-//        }
-//    }
-//
+
     private func saveEntry() {
         if let noteEntry = noteEntry{
             
@@ -55,12 +52,34 @@ struct NoteEntryView: View {
             
         }else
         {
-            let newEntry = NoteInformation(note:note)
-            notes.noteEntries.append(newEntry)
+            addNewEntry()
         }
         
         
+     
+        
     }
+    private func addNewEntry() {
+        print("addNewEntry called")
+        let db = Firestore.firestore()
+
+        // Anta att 'note' är en sträng som representerar noteringen du vill spara
+        var ref: DocumentReference? = nil
+        ref = db.collection("notes").addDocument(data: [
+            "note": note
+        ]) {  err in
+            if let err = err {
+                print("Error adding document: \(err)")
+            } else if let ref = ref {
+                print("Document added with ID: \(ref.documentID)")
+                let newEntry = NoteInformation(id: ref.documentID, note: note)
+              
+            }
+        }
+    }
+
+
+    
     
     
     

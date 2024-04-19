@@ -14,6 +14,9 @@
 		52F3BF6B2BD1519500222BF7 /* NotesAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F3BF6A2BD1519500222BF7 /* NotesAppTests.swift */; };
 		52F3BF752BD1519500222BF7 /* NotesAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F3BF742BD1519500222BF7 /* NotesAppUITests.swift */; };
 		52F3BF772BD1519500222BF7 /* NotesAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F3BF762BD1519500222BF7 /* NotesAppUITestsLaunchTests.swift */; };
+		52F3BF842BD16E8F00222BF7 /* NoteInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F3BF832BD16E8F00222BF7 /* NoteInformation.swift */; };
+		52F3BF862BD16FD200222BF7 /* NoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F3BF852BD16FD200222BF7 /* NoteViewModel.swift */; };
+		52F3BF882BD1709800222BF7 /* NoteEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F3BF872BD1709800222BF7 /* NoteEntryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		52F3BF702BD1519500222BF7 /* NotesAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NotesAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		52F3BF742BD1519500222BF7 /* NotesAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesAppUITests.swift; sourceTree = "<group>"; };
 		52F3BF762BD1519500222BF7 /* NotesAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		52F3BF832BD16E8F00222BF7 /* NoteInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteInformation.swift; sourceTree = "<group>"; };
+		52F3BF852BD16FD200222BF7 /* NoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewModel.swift; sourceTree = "<group>"; };
+		52F3BF872BD1709800222BF7 /* NoteEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteEntryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +104,9 @@
 				52F3BF5B2BD1519400222BF7 /* ContentView.swift */,
 				52F3BF5D2BD1519500222BF7 /* Assets.xcassets */,
 				52F3BF5F2BD1519500222BF7 /* Preview Content */,
+				52F3BF832BD16E8F00222BF7 /* NoteInformation.swift */,
+				52F3BF852BD16FD200222BF7 /* NoteViewModel.swift */,
+				52F3BF872BD1709800222BF7 /* NoteEntryView.swift */,
 			);
 			path = NotesApp;
 			sourceTree = "<group>";
@@ -257,6 +266,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52F3BF862BD16FD200222BF7 /* NoteViewModel.swift in Sources */,
+				52F3BF882BD1709800222BF7 /* NoteEntryView.swift in Sources */,
+				52F3BF842BD16E8F00222BF7 /* NoteInformation.swift in Sources */,
 				52F3BF5C2BD1519400222BF7 /* ContentView.swift in Sources */,
 				52F3BF5A2BD1519400222BF7 /* NotesAppApp.swift in Sources */,
 			);

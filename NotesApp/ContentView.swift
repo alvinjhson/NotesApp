@@ -8,14 +8,36 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var note : NoteViewModel
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack{
+            VStack {
+                List() {
+                    ForEach(note.noteEntries) { entry in
+                        NavigationLink( destination:NoteEntryView(noteEntry: entry)){
+                            rowView(entry: entry)
+                        }
+                        
+                    }
+                }
+            }
+            .navigationTitle("Notes")
+            .navigationBarItems( trailing: NavigationLink(destination: NoteEntryView()) {
+               Image(systemName: "plus.circle")
+            })
         }
-        .padding()
+    }
+}
+struct rowView: View {
+    
+    let entry: NoteInformation
+    
+    var body: some View {
+        HStack {
+            Text(entry.note)
+                       
+
+        }
     }
 }
 
